@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+}
+
+header {
+    padding: 1rem 10vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background-color: #101010;
+}
+
+.logomarca, .usuario {
+    display: flex;
+    align-items: center;
+}
+
+.logomarca {
+    color: white;
+    font-family: Montserrat;
+    font-weight: bolder;
+}
+
+.usuario {
+    display: flex;
+    gap: .5rem;
+
+    background-color: skyblue;
+    padding: .5rem .75rem .5rem .5rem;
+    border-radius: 2rem;
+
+    font-family: Inter Tight;
+}
+
+.usuario img {
+    max-height: 2rem;
+    border-radius: 50%;
+}
+
+.usuario p {
+    font-weight: bold;
+}
+
+/* Tela de seleção */
+
+section {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: rgba(0, 0, 0, .3);
+}
+
+section form {
+    width: 60vw;
+
+    background-color: white;
+}
+
+/* Fontes */
+
+@font-face {
+    font-family: Inter Tight;
+    src: url(fontes/inter_tight/inter_tight.ttf);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(fontes/montserrat/montserrat.ttf);
+}
