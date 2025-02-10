@@ -104,7 +104,7 @@ aside button:hover {
     background-color: rgb(16, 46, 112);
 }
 
-aside h2 , #mostrar-concordancia h2{
+aside h2 , #mostrar-concordancia h2 {
     font-family: Montserrat;
 }
 
@@ -129,7 +129,8 @@ body > section form {
 
     background-color: white;
 }
-button{
+
+button { 
     box-sizing: border-box;
     cursor: pointer;
     
@@ -146,7 +147,8 @@ button{
 
     border-radius: 5px;
 }
-#buscar-concordancia p, #mostrar-concordancia li{
+
+#buscar-concordancia p, #mostrar-concordancia li {
     font-weight: bold;
     font-family: Montserrat;
 
@@ -156,64 +158,66 @@ button{
 
     font-size: 12pt;
 }
-input{
+
+input {
     border-radius: 5px;
     border: 1px solid rgb(16, 43, 102);
 
     color: rgb(16, 43, 102);
 }
-#mostrar-concordancia{
+
+#mostrar-concordancia {
     display: none;
 }
+
 table {
     border-collapse: collapse;
     font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
-  }
+}
   
-  caption {
+caption {
     caption-side: bottom;
     padding: 10px;
     font-weight: bold;
-  }
-  
-  thead,
-  tfoot {
+}
+
+thead, tfoot {
     background-color: rgb(228 240 245);
-  }
-  
-  th,
-  td {
+}
+
+th, td {
     background-color: rgb(102, 143, 231);
     border: 1px solid rgb(255, 255, 255);
     padding: 8px 10px;
-  }
-  
-  th img{
+}
+
+th img {
     display: inline;
     min-width: 5rem;
     max-width: 5rem;
     min-height: 5rem;
     max-height: 5rem;
-  }
-  td:last-of-type {
+}
+
+td:last-of-type {
     text-align: center;
-  }
-  
-  tbody > tr:nth-of-type(even) {
+}
+
+tbody > tr:nth-of-type(even) {
     background-color: rgb(78, 119, 206);
-  }
-  
-  tfoot th {
+}
+
+tfoot th {
     text-align: right;
-  }
-  
-  tfoot td {
+}
+
+tfoot td {
     font-weight: bold;
-  }
+}
   
-#oqueFazer{
+#oqueFazer {
     display: block;
 
     color: white;
@@ -230,7 +234,8 @@ table {
     min-height: 5rem;
     max-height: 5rem;
 }
-#oqueFazer a{
+
+#oqueFazer a {
     color: white;
     display: inline;
 }
