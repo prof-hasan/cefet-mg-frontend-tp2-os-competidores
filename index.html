@@ -20,16 +20,77 @@
     </header>
 
     <aside>
-        <div>
+        <section>
             <h2>Suas listas</h2>
             <button>+</button>
-        </div>
-        <div>
+        </section>
+        <section>
             
-        </div>
+        </section>
     </aside>
 
+
     <main>
+        <section id="buscar-coisas">
+            <form>
+                <section>
+                    <div>
+                        <input type="text" placeholder="bucar coisas pra fazer...">
+                        <button onclick="">Procurar</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+
+        <section id="oqueFazer">
+            <h2>O que fazer?</h2>
+            <p>Confira os ultimos adicionados da lista, mais importantes</p>
+            <a href="#">e mais</a>
+        </section>
+
+        <section id="buscar-concordancia">
+            <form onsubmit="return validarEntrada(event)">
+                <section>
+                    <div>
+                        <p>Digite o Id do seu Amiguinho</p>
+                        <input type="text" id="idAmiguinho">
+                        <button type="submit">Ver</button>
+                    </div>
+                </section>
+            </form>
+        </section>
+
+        <section id="mostrar-concordancia">
+            <h2 id="usuarioEncontrado">Usuário xxx666 encontrado:</h2>
+            <table>
+                <caption>Vocês tem muito em comum</caption>
+
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAei2SbBFZMihUrqg_-NyVpVsv7ULkdr1s4A&s">
+                    </th>
+                    <td>Item 1</td>
+                    <td>Série</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <img src="https://http2.mlstatic.com/D_Q_NP_894295-MLM49668062133_042022-O.webp">
+                    </th>
+                    <td>Item 2</td>
+                    <td>Jogo</td>
+                  </tr>
+                  <tr>
+                    <th scope="row">
+                        <img src="https://static.wikia.nocookie.net/sanrio/images/9/9f/Hello_Kitty.jpg/revision/latest/scale-to-width-down/1200?cb=20191128154539">
+                    </th>
+                    <td>Item 3</td>
+                    <td>Musica</td>
+                  </tr>
+    
+                </tfoot>
+              </table>
+        </section>
         <!--Logo em seguida o usuário e recebido no site-->
         
 
@@ -41,11 +102,13 @@
             ele pode olhar concordancia com outros usuarios
         -->    
     </main>
+
     
+
     <footer>
                 
     </footer>
-
+    
     <section style="display: none;">
         <form>
             <section>
@@ -66,5 +129,5 @@
     </section>
 </body>
 
-<script src=""></script> <!-- JavaScriptum de cria -->
+<script src="busca.js"></script> <!-- JavaScriptum de cria -->
 </html>
