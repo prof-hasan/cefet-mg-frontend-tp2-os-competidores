@@ -44,7 +44,10 @@ header {
     font-family: Montserrat;
     font-weight: bolder;
 }
-
+.logomarca, img{
+    width: 40%;
+    height: 90%;
+}
 .usuario {
     display: flex;
     gap: .5rem;
