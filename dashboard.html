@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <link rel="icon" href="icon.png" type="image/x-icon" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MatchLists</title>
+
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="logomarca">
+            <img src="icon.png">
+            <h1>MatchLists</h1>
+        </div>
+        <a class="usuario" href="index.html">
+            <img src="imagens/user.png" alt="">
+            <p class="nome-perfil">Junin123</p>
+        </a>
+    </header>
+
+    <main>
+        <article>
+            <section>
+                <h2>Suas listas</h2>
+            </section>
+
+            <section class="container-listas">
+                <div class="controle-listas">
+                    <div class="selecao-listas">
+
+                    </div>
+                    <button>+</button>
+                </div>
+                <div class="conteudo-listas">
+                    <button class="abrir-menu-item">Adicionar item</button>
+                    <div class="visualizador"></div>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer></footer>
+
+    <aside class="criacao-item">
+        <header>
+            <h2>Criação de item</h2>
+            <button class="fechar">X</button>
+        </header>
+        <section class="pesquisa-conteudo">
+            <div class="categoria-conteudo">
+                <img src="" alt="" class="imagem-categoria">
+                <div>
+                    <label>Digite a categoria do conteúdo:
+                        <select>
+                            <option value="musica">Música</option>
+                            <option value="filme-serie">Filmes e séries</option>
+                            <option value="livro">Livro</option>
+                            <option value="jogo">Jogos</option>
+                        </select>
+                    </label>                    
+                </div>
+            </div>
+
+            <div class="musica pesquisa">
+                <label>
+                    <p>Digite o nome da música:</p>
+                    <input type="text" class="input-musica">
+                </label>
+                <label>
+                    <p>Digite o artista:</p>
+                    <input type="text" class="input-artista">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="filme-serie pesquisa">
+                <label>
+                    <p>Digite o nome do filme ou série:</p>
+                    <input type="text" class="input-filme-serie">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="livro pesquisa">
+                <label>
+                    <p>Digite o nome do livro:</p>
+                    <input type="text" class="input-livro">
+                </label>
+                <label>
+                    <p>Digite o autor:</p>
+                    <input type="text" class="input-autor">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="jogo pesquisa">
+                <label>
+                    <p>Digite o nome do jogo:</p>
+                    <input type="text" class="input-jogo">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+        </section>
+
+        <section class="resultados"></section>
+    </aside>
+
+    <aside class="criacao-lista">
+        <header>
+            <h2>Criar Lista</h2>
+            <button class="fechar">X</button>
+        </header>
+        
+        <section>
+            <div>
+                <label>Nome:
+                    <input type="text" class="nome-lista" placeholder="Nomeie sua  lista...">
+                </label>
+                <label>Descrição:
+                    <input type="text" class="descricao-lista" placeholder="Descreva sua  lista...">
+                </label>
+            </div>
+            <label>Cor da Lista:
+                <input type="color" class="cor-lista">
+            </label>
+        </section>
+
+        <button>Criar</button>
+    </aside>
+</body>
+
+<script src="jquery.js"></script>
+<script src="scripts/abas.js"></script>
+<script src="scripts/lista.js"></script>
+<script src="scripts/carregarPerfil.js"></script>
+<script src="scripts/apis.js"></script>
+<script src="scripts/categoria.js"></script>
+
+</html>

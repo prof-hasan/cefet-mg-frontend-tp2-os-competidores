@@ -26,7 +26,7 @@ function cadastrar() {
     mostrarMensagem("Registro realizado com sucesso! Redirecionando para o login...", "success");
 
     setTimeout(() => {
-        window.location.href = "index.html";
+        window.location.href = "dashboard.html";
     }, 2000);
 }
 
@@ -53,7 +53,7 @@ function login() {
         sessionStorage.setItem("usuario", id); // Salva o ID do usuário logado
         mostrarMensagem(`Bem-vindo, ${usuario.nome}!`, "success");
         setTimeout(() => {
-            window.location.href = "index.html"; // Redireciona para a página principal
+            window.location.href = "dashboard.html"; // Redireciona para a página principal
         }, 2000);
     } else {
         mostrarMensagem("Senha incorreta!", "error");
