@@ -15,9 +15,11 @@ function adicionarMusica(musica) {
 
     let $containerResultados = $(".criacao-item .resultados")
 
-    let $containerMusica = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}" data-artista="${artistasTexto}"></div>`)
+    let $containerMusica = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}" data-descricao="${artistasTexto}"></div>`)
 
-    $containerMusica.append('<button class="adicionar-item">+</button>')
+    let $botaoCriarItem = $('<button class="adicionar-item">+</button>')
+
+    $containerMusica.append($botaoCriarItem)
     $containerMusica.append(`<img src="${srcImagem}">`)
 
     let $containerInformacoes = $('<div class="informacoes"></div>')
@@ -28,6 +30,8 @@ function adicionarMusica(musica) {
     $containerMusica.append($containerInformacoes)
 
     $containerResultados.append($containerMusica)
+
+    $botaoCriarItem.click(criarItem);
 }
 
 function adicionarFilmeSerie(producao) {
@@ -39,7 +43,9 @@ function adicionarFilmeSerie(producao) {
 
     let $containerFilmeSerie = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}"></div>`);
 
-    $containerFilmeSerie.append('<button class="adicionar-item">+</button>')
+    let $botaoCriarItem = $('<button class="adicionar-item">+</button>')
+
+    $containerFilmeSerie.append($botaoCriarItem)
     $containerFilmeSerie.append(`<img src="${srcImagem}">`)
 
     let $containerInformacoes = $('<div class="informacoes"></div>')
@@ -49,6 +55,8 @@ function adicionarFilmeSerie(producao) {
     $containerFilmeSerie.append($containerInformacoes)
 
     $containerResultados.append($containerFilmeSerie)
+
+    $botaoCriarItem.click(criarItem);
 }
 
 function adicionarLivro(livro) {
@@ -62,9 +70,11 @@ function adicionarLivro(livro) {
 
     let $containerResultados = $(".criacao-item .resultados");
 
-    let $containerLivro = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}" data-autor="${artistasTexto}"></div>`)
+    let $containerLivro = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}" data-descricao="${artistasTexto}"></div>`)
+    
+    let $botaoCriarItem = $('<button class="adicionar-item">+</button>')
 
-    $containerLivro.append('<button class="adicionar-item">+</button>')
+    $containerLivro.append($botaoCriarItem)
     $containerLivro.append(`<img src="${srcImagem}">`)
 
     let $containerInformacoes = $('<div class="informacoes"></div>')
@@ -75,6 +85,8 @@ function adicionarLivro(livro) {
     $containerLivro.append($containerInformacoes)
 
     $containerResultados.append($containerLivro)
+
+    $botaoCriarItem.click(criarItem);
 }
 
 function adicionarJogo(jogo) {
@@ -86,7 +98,9 @@ function adicionarJogo(jogo) {
 
     let $containerJogo = $(`<div class="resultado" data-capa="${srcImagem}" data-titulo="${tituloTexto}"></div>`)
 
-    $containerJogo.append('<button class="adicionar-item">+</button>')
+    let $botaoCriarItem = $('<button class="adicionar-item">+</button>')
+
+    $containerJogo.append($botaoCriarItem)
     $containerJogo.append(`<img src="${srcImagem}">`)
 
     let $containerInformacoes = $('<div class="informacoes"></div>')
@@ -96,6 +110,8 @@ function adicionarJogo(jogo) {
     $containerJogo.append($containerInformacoes)
 
     $containerResultados.append($containerJogo)
+
+    $botaoCriarItem.click(criarItem);
 }
 
 async function buscarMusica(nome, artista) {

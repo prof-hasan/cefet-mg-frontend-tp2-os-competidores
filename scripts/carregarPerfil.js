@@ -8,12 +8,15 @@ function carregarPerfil() {
         $nomePerfil.html(dados.nome)
 
         let listas = dados.listas;
-        for(let lista of listas) {
-            adicionarLista(lista);
-        }
+        carregarListas(listas)
+
+        if(listas[listaSelecionada].itens)
+            carregarItens(listas[listaSelecionada].itens);
     }
-    else
+    else {
+        sessionStorage.setItem("itens", JSON.stringify([]))
         $nomePerfil.html("Convidado");
+    }
 }
 
 carregarPerfil();
