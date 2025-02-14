@@ -1,17 +1,41 @@
 * {
+    box-sizing: border-box;
     margin: 0;
 }
 
-header {
-    padding: 1rem 10vw;
+body {
+    display: grid;
+    grid-template-rows: 5rem calc(100vh - 7rem) auto;
+    grid-template-areas: "header" "main" "footer";
+
+    row-gap: 1rem;
 }
 
-header {
+body > header {
+    padding: 0 10vw;
+    grid-area: header;
+}
+
+main {
+    grid-area: main;
+}
+
+footer {
+    grid-area: footer;
+}
+
+button:hover, select:hover {
+    cursor: pointer;
+}
+
+/* Cabeçalho */
+
+body > header {
     display: flex;
     justify-content: space-between;
     align-items: center;
 
-    background-color: #101010;
+    background-color: rgb(110, 180, 255);
 }
 
 .logomarca, .usuario {
@@ -20,7 +44,7 @@ header {
 }
 
 .logomarca {
-    color: white;
+    color: rgb(16, 43, 102);
     font-family: Montserrat;
     font-weight: bolder;
 }
@@ -28,43 +52,307 @@ header {
 .usuario {
     display: flex;
     gap: .5rem;
-
-    background-color: skyblue;
-    padding: .5rem .75rem .5rem .5rem;
+    color: white;
+    background-color: rgb(19, 62, 153);
+    padding: .5rem .75rem;
     border-radius: 2rem;
-
     font-family: Inter Tight;
+    cursor: pointer;
+}
+
+.usuario:hover { 
+    background-color: rgb(29, 84, 201);
 }
 
 .usuario img {
     max-height: 2rem;
     border-radius: 50%;
+    filter: brightness(0%) invert(1);
 }
 
 .usuario p {
     font-weight: bold;
 }
 
-/* Tela de seleção */
+/* Listas */
 
-section {
+.controle-listas {
+    display: flex;
+}
+
+.controle-listas > * {
+    flex: 1;
+}
+
+.selecao-listas {
+    display: flex;
+    overflow: scroll;
+}
+
+.selecao-listas > * {
+    box-sizing: border-box;
+    max-width: calc(100% / 2);
+    min-width: calc(100% / 2);
+
+    overflow: hidden;
+    white-space: wrap;
+
+    padding: .5rem;
+}
+
+/* Rodapé */
+
+footer {
+    background-color: #101010;
+}
+
+/* Aside */
+
+/* Sombra que destaca o menu */
+body::after {
+    display: none;
+
     position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+    content: "";
 
+    top: 50%;
+    left: 50%;
+
+    height: 100vh;
+    width: 100vw;
+    transform: translate(-50%, -50%);
+
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+
+body.fundo-visivel::after {
+    display: block !important;
+}
+
+aside {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+
+    padding: 1rem;
+
+    border: 3px solid #101010;
+    border-radius: .5rem;
+
+    background-color: white;
+
+    display: none;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    font-family: Inter Tight;
+    z-index: 1;
+}
+
+aside input {
+    text-align: center;
+    border-radius: 25px;
+    border: 2px solid rgb(16, 43, 102);
+    color: rgb(16, 43, 102);
+
+    font-family: Inter Tight;
+    font-size: 11pt;
+}
+
+aside input:focus {
+    font-weight: bold;
+    border: 2px solid rgb(16, 43, 102);
+}
+
+aside button {
+    padding: .5rem 0;
+
+    background-color: rgb(19, 62, 153);
+    color: white;
+
+    border: none;
+    border-radius: 2rem;
+
+    font-size: 12pt;
+    font-family: Montserrat;
+}
+
+aside button:hover {
+    background-color: rgb(29, 84, 201);
+}
+
+aside select {
+    padding: .5rem;
+
+    background-color: rgb(19, 62, 153);
+    color: white;
+
+    font-family: Montserrat;
+
+    border: none;
+    border-radius: 25px;
+}
+
+aside select:hover {
+    background-color: rgb(29, 84, 201);
+}
+
+aside header {
+    display: flex;
+    justify-content: space-between;
+}
+
+aside header h2 {
+    font-family: Montserrat;
+}
+
+aside header button {
+    max-width: 2rem;
+    max-height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: rgb(19, 62, 153);
+    color: white;
+    font-family: Montserrat;
+    font-weight: bold;
+}
+
+aside header button:hover {
+    background-color: rgb(29, 84, 201);
+}
+
+/* Criação de item */
+
+.pesquisa-conteudo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.categoria-conteudo {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.imagem-categoria {
+    max-width: 8rem;
+}
+
+.categoria-conteudo div {
+    display: flex;
+    align-items: center;
+}
+
+.categoria-conteudo label {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.pesquisa {
+    display: none;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.pesquisa label {
+    display: flex;
+}
+
+.pesquisa label * {
+    flex: 1;
+}
+
+.resultados {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: .25rem;
+}
+
+.resultado {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    background-color: rgba(0, 0, 0, .3);
+    gap: 1rem;
 }
 
-section form {
-    width: 60vw;
+.adicionar-item {
+    background-color: rgb(19, 62, 153);
+    color: white;
 
-    background-color: white;
+    max-width: 2rem;
+    max-height: 2rem;
+    min-width: 2rem;
+    min-height: 2rem;
+
+    font-size: 12pt;
+    font-family: Montserrat;
+    font-weight: bold;
+
+    border: none;
+    border-radius: 50%;
+}
+
+.adicionar-item:hover {
+    background-color: rgb(29, 84, 201);
+}
+
+.resultado img {
+    max-height: 5rem;
+    max-width: 5rem;
+    min-height: 5rem;
+    min-width: 5rem;
+    object-fit: cover;
+}
+
+.informacoes {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+/* Criação de lista */
+
+.criacao-lista section {
+    display: flex;
+    gap: 1rem;
+}
+
+.criacao-lista section * {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.criacao-lista section div {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.cor-lista {
+    background-color: transparent;
+    border-radius: 0;
+}
+
+.cor-lista:hover {
+    cursor: pointer;
+}
+
+/* Classes genéricas */ 
+
+.visivel-flex {
+    display: flex !important;
 }
 
 /* Fontes */

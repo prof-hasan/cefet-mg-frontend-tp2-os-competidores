@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,64 +8,161 @@
 
     <link rel="stylesheet" href="main.css">
 </head>
+
 <body>
     <header>
         <div class="logomarca">
+            <img src="">
             <h1>MatchLists</h1>
-            <img src=""> <!--Um logo talvez-->
         </div>
         <div class="usuario">
-            <img src="imagens/user.jpeg" alt=""> <!-- Imagem do usuario -->
-            <p>Junin123</p>
+            <img src="imagens/user.png" alt="">
+            <p class="nome-perfil">Junin123</p>
         </div>
     </header>
 
-    <aside>
-        <div>
-            <h2>Suas listas</h2>
-            <button>+</button>
-        </div>
-        <div>
-            
-        </div>
-    </aside>
-
     <main>
-        <!--Logo em seguida o usuário e recebido no site-->
-        
-
-        <!--Funcionalidades-->
-        <!--
-            O usuario pode abrir a suas playlists e editar oq ela possui
-            Ele organiza por prioriadade filme, jogos, livros a ler
-            Ele pode consultar coisas pra fazer
-            ele pode olhar concordancia com outros usuarios
-        -->    
-    </main>
-    
-    <footer>
-                
-    </footer>
-
-    <section style="display: none;">
-        <form>
-            <section>
-                <div>
-                    <img src="" alt="">
-                    <select name="">
-                        <option value="">Música</option>
-                        <option value="">Filmes e Séries</option>
-                        <option value="">Jogos</option>
-                    </select>
+        <section id="calcular-concordancia" style="display: none;">
+            <form>
+                <p>Digite o usuário do seu amigo</p>
+                <input type="text" id="idAmigo">
+                <button type="submit">Checar</button>
+            </form>
+            <div class="concordancia">
+                <h2>Usuário não procurado</h2>
+                <p>Vocês combinam: <span class="porcentagem-match">0%</span></p>
+                <div class="melhores-match">
+                    <div>
+                        <h3>Música</h3>
+                        <p>Melhor música</p>
+                        <img src="imagens/user.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h3>Filmes e séries</h3>
+                        <p>Melhor filme/série</p>
+                        <img src="imagens/user.jpeg" alt="">
+                    </div>
+                    <div>
+                        <h3>Jogos</h3>
+                        <p>Melhor jogo</p>
+                        <img src="imagens/user.jpeg" alt="">
+                    </div>
                 </div>
-                <div>
-                    <p>Nome do item</p>
-                    <input type="text">
+            </div>
+        </section>
+        <article>
+            <section>
+                <h2>Suas listas</h2>
+            </section>
+
+            <section class="container-listas">
+                <div class="controle-listas">
+                    <div class="selecao-listas">
+
+                    </div>
+                    <button>+</button>
+                </div>
+                <div class="conteudo-listas">
+
                 </div>
             </section>
-        </form>
-    </section>
+        </article>
+    </main>
+
+    <footer>
+        <p>dsadnhsakjdh</p>
+    </footer>
+
+    <aside class="criacao-item">
+        <header>
+            <h2>Criação de item</h2>
+            <button class="fechar">X</button>
+        </header>
+        <section class="pesquisa-conteudo">
+            <div class="categoria-conteudo">
+                <img src="" alt="" class="imagem-categoria">
+                <div>
+                    <label>Digite a categoria do conteúdo:
+                        <select>
+                            <option value="musica">Música</option>
+                            <option value="filme-serie">Filmes e séries</option>
+                            <option value="livro">Livro</option>
+                            <option value="jogo">Jogos</option>
+                        </select>
+                    </label>                    
+                </div>
+            </div>
+
+            <div class="musica pesquisa">
+                <label>
+                    <p>Digite o nome da música:</p>
+                    <input type="text" class="input-musica">
+                </label>
+                <label>
+                    <p>Digite o artista:</p>
+                    <input type="text" class="input-artista">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="filme-serie pesquisa">
+                <label>
+                    <p>Digite o nome do filme ou série:</p>
+                    <input type="text" class="input-filme-serie">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="livro pesquisa">
+                <label>
+                    <p>Digite o nome do livro:</p>
+                    <input type="text" class="input-livro">
+                </label>
+                <label>
+                    <p>Digite o autor:</p>
+                    <input type="text" class="input-autor">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+            <div class="jogo pesquisa">
+                <label>
+                    <p>Digite o nome do jogo:</p>
+                    <input type="text" class="input-jogo">
+                </label>
+                <button>Pesquisar</button>
+            </div>
+        </section>
+
+        <section class="resultados"></section>
+    </aside>
+
+    <aside class="criacao-lista">
+        <header>
+            <h2>Criar Lista</h2>
+            <button class="fechar">X</button>
+        </header>
+        
+        <section>
+            <div>
+                <label>Nome:
+                    <input type="text" class="nome-lista" placeholder="Nomeie sua  lista...">
+                </label>
+                <label>Descrição:
+                    <input type="text" class="descricao-lista" placeholder="Descreva sua  lista...">
+                </label>
+            </div>
+            <label>Cor da Lista:
+                <input type="color" class="cor-lista">
+            </label>
+        </section>
+
+        <button>Criar</button>
+    </aside>
 </body>
 
-<script src=""></script> <!-- JavaScriptum de cria -->
+<script src="jquery.js"></script>
+<script src="scripts/lista.js"></script>
+<script src="scripts/carregarPerfil.js"></script>
+<script src="scripts/apis.js"></script>
+<script src="scripts/abas.js"></script>
+<script src="scripts/categoria.js"></script>
+
 </html>
